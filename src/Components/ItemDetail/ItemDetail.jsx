@@ -1,15 +1,16 @@
-import './style.css'
+import "./style.css";
 
-const ItemDetail = ({ ItemSelected }) => {
+const ItemDetail = ({ itemSelected }) => {
+  console.log(itemSelected);
   return (
     <div>
-      <h6 className="card-title">{ItemSelected?.title}</h6>
-      <img src={ItemSelected?.image} alt={ItemSelected?.title} width={70} />
+      <h6 className="card-title">{itemSelected?.title}</h6>
+      <img src={itemSelected?.image} alt={itemSelected?.title} width={70} />
       <div className="card-description">
-<p>{ItemSelected?.description}</p>
+        <p>{itemSelected?.description}</p>
       </div>
 
-      <p>${ItemSelected?.price}</p>
+      <p>${itemSelected?.price}</p>
     </div>
   );
 };

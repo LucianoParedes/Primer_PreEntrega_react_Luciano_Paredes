@@ -7,19 +7,19 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const fetchProduct = () => {
-    fetch(`https://fakestoreapi.com/products${id}`)
+    fetch(`https://fakestoreapi.com/products/${id}`)
       .then((response) => response.json())
       .then((data) => setProduct(data))
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    fetchProduct();
+    fetchProduct(); 
   }, []);
 
   return (
     <div>
-      <ItemDetail itemSelected={product} />
+      <ItemDetail ItemSelected={product} />
     </div>
   );
 };

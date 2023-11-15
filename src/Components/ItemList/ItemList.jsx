@@ -1,12 +1,12 @@
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Item from "../Item/Item";
-import './styles.css'
+import "./styles.css";
 
 const ItemList = ({ productList }) => {
   return (
     <div className="item-list-container">
       {productList.map((product) => (
-        <Link to={'item/' + product.id} key={productList.id}>
+        <Link to={"item/" + product.id} key={product.id}>
           <Item
             title={product.title}
             description={product.description}
